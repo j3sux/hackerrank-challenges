@@ -7,22 +7,19 @@ import re
 import sys
 
 # Complete the jumpingOnClouds function below.
+# Solution to https://www.hackerrank.com/challenges/jumping-on-the-clouds/problem
 def jumpingOnClouds(c):
     lastCloud = len(c)-1
-    position=0
-    numJumps=0
-    
+    position=numJumps=0
     while (position<lastCloud):
         bigJump=position+2
         smallJump=position+1
-
         if (bigJump<=lastCloud and c[bigJump]==0):
             position=bigJump
             numJumps+=1
         elif (smallJump<=lastCloud and c[smallJump]==0):
             position=smallJump
             numJumps+=1
-            
     return numJumps    
 
 if __name__ == '__main__':

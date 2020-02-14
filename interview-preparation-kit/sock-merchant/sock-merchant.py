@@ -8,6 +8,7 @@ import sys
 import collections
 
 # Complete the sockMerchant function below.
+# Solution to  https://www.hackerrank.com/challenges/sock-merchant/problem
 def sockMerchant(n, ar):
     totalPairs = 0
     counter = collections.Counter(ar)

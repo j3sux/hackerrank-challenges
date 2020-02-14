@@ -7,6 +7,7 @@ import re
 import sys
 
 # Complete the countingValleys function below.
+# Solution to  https://www.hackerrank.com/challenges/counting-valleys/problem
 def countingValleys(n, s):
     level=valleys=0
     for action in s:
