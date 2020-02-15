@@ -9,10 +9,16 @@ import collections
 
 # Complete the repeatedString function below.
 def repeatedString(s, n):
-    multiply = (n/len(s))+1
-    nString = (multiply * s)[:n]
-    counter = collections.Counter(nString) 
-    return counter['a']
+    totCount = centinel =0
+    while centinel<n:
+        for character in s:
+            centinel+=1
+            if character == 'a':
+                totCount+=1
+            if centinel == n:
+                break
+    print(totCount)
+    return totCount
 
 
 if __name__ == '__main__':
