@@ -8,18 +8,13 @@ import sys
 import collections
 
 # Complete the repeatedString function below.
+# Solution to https://www.hackerrank.com/challenges/repeated-string/problem
 def repeatedString(s, n):
-    totCount = centinel =0
-    while centinel<n:
-        for character in s:
-            centinel+=1
-            if character == 'a':
-                totCount+=1
-            if centinel == n:
-                break
-    print(totCount)
-    return totCount
-
+ 
+    multiple = (n//len(s))
+    totCount = (s.count('a')*multiple) + s[:int(n - (len(s)*multiple))].count('a')
+   
+    return totCount  
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
