@@ -29,7 +29,6 @@ if __name__ == '__main__':
         arr.append(list(map(int, input().rstrip().split())))
 
     result = hourglassSum(arr)
-    print(result)
 
     fptr.write(str(result) + '\n')
 
