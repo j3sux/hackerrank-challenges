@@ -21,7 +21,7 @@ def hourglassSum(arr):
 
 
 if __name__ == '__main__':
-    #fptr = open(os.environ['OUTPUT_PATH'], 'w')
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     arr = []
 
@@ -31,6 +31,6 @@ if __name__ == '__main__':
     result = hourglassSum(arr)
     print(result)
 
-    #fptr.write(str(result) + '\n')
+    fptr.write(str(result) + '\n')
 
-    #fptr.close()
+    fptr.close()
