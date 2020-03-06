@@ -10,20 +10,24 @@ import collections
 # Complete the matchingStrings function below.
 # Solution to  https://www.hackerrank.com/challenges/sparse-arrays/problem
 def matchingStrings(strings, queries):
-    counter = collections.Counter(strings)
-    result = []
+    result = []    
+    d={}
+    for s in strings:
+        d.setdefault(len(s),[]).append(s)
+    
     for q in queries:
-        print(q)
+        i = len(q)
+        subC=d.get(i,[]) 
+        counter = collections.Counter(subC)
         instances=(counter[q])
         result.append(instances)
-    print(result)
     return result
 
     
 
 
 if __name__ == '__main__':
-    #fptr = open(os.environ['OUTPUT_PATH'], 'w')
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     strings_count = int(input())
 
@@ -43,7 +47,7 @@ if __name__ == '__main__':
 
     res = matchingStrings(strings, queries)
 
-    #fptr.write('\n'.join(map(str, res)))
-    #fptr.write('\n')
+    fptr.write('\n'.join(map(str, res)))
+    fptr.write('\n')
 
-    #fptr.close()
+    fptr.close()
